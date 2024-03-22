@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Get Question Text Extension",
+  "version": "1.0",
+  "description": "A Chrome extension to get question text from a webpage.",
+  "permissions": ["activeTab"],
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
